@@ -8,6 +8,7 @@ const store = createStore({
                     id: 1,
                     text: '',
                     date: '',
+                    position:'',
                 }
             ]
         }
@@ -18,13 +19,15 @@ const store = createStore({
         },
     },
     actions: {
-        addNotification({ getters }, text, date) {
+        addNotification({ getters }, data) {
             let id = getters.notifications.length + 1;
             getters.notifications.unshift({
                 id,
-                text,
-                date,
-            })
+                ...data, //распаковка объекта data из App.vue,
+                //который передается внутри метода notify()
+                //text: data.text, - вид без распаковки
+                //date: data.date,
+            });
         }
     }
 })
