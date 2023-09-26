@@ -34,7 +34,7 @@
       }
     },
     methods: {
-        ...mapActions(['addNotification']),
+        ...mapMutations(['addNotification']),
         notify1(){
           this.addNotification({
             text: 'this is left top notification',
@@ -80,7 +80,6 @@
     }
   }
 </script>
-
 
 <style>
 .title {
