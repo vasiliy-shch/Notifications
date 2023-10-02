@@ -16,7 +16,7 @@ import { mapGetters } from 'vuex'
 import Notification from './Notification.vue'
 
 export default {
-    components:{
+    components: {
         Notification,
     },
     computed: mapGetters(['notifications']),
