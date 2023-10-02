@@ -30,49 +30,49 @@
       NotificationList,
     },
     data() {
-      return{
+      return {
 
       }
     },
     methods: {
         ...mapActions(['addNotification',]),
-        notify1(){
-          this.addNotification({
+        notify1() {
+          this.addNotification( {
             text: 'this is left top notification',
             date: new Date,
             position: 'top_left',
           })
         },
-        notify2(){
-          this.addNotification({
+        notify2() {
+          this.addNotification( {
             text: 'this is center top notification',
             date: new Date,
             position: 'top_center'
           })
         },
-        notify3(){
-          this.addNotification({
+        notify3() {
+          this.addNotification( {
             text: 'this is right top notification',
             date: new Date,
             position: 'top_right'
           })
         },
-        notify4(){
-          this.addNotification({
+        notify4() {
+          this.addNotification( {
             text: 'this is left bottom notification',
             date: new Date,
             position: 'bottom_left'
           })
         },
-        notify5(){
-          this.addNotification({
+        notify5() {
+          this.addNotification( {
             text: 'this is center bottom notification',
             date: new Date,
             position: 'bottom_center'
           })
         },
-        notify6(){
-          this.addNotification({
+        notify6() {
+          this.addNotification( {
             text: 'this is right bottom notification',
             date: new Date,
             position: 'bottom_right'
@@ -87,12 +87,12 @@
   margin-bottom: 0;
   margin: 0 auto;
 }
-.center{
+.center {
   display: flex;
   margin: 350px auto;
   justify-content: center;
 }
-.body{
+.body {
   display: flex;
   flex-direction: column;
   align-self: auto;
@@ -104,14 +104,14 @@ button {
     margin: 0 10px;
     cursor: pointer;
 }
-button:hover{
+button:hover {
   opacity: .6;
 }
-.buttons{
+.buttons {
   display: flex;
   margin: 10px auto;
 }
-.notification{
+.notification {
     border: 1px solid red;
     border-radius: 10px;
     width: 40%;
@@ -122,7 +122,7 @@ button:hover{
     background-color: bisque;
     margin-top: 5px;
 }
-.notification:hover{
+.notification:hover {
     opacity: .8;
 }
 .notification_hidden {

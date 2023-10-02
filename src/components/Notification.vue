@@ -1,11 +1,10 @@
 <template>
     <div :class="[position, styles]" @click="removeNotification(id)"> 
-        <div>{{ id }}</div>
-        <div>{{ text }}</div>
-        <div>{{ date }}</div>
-        <div>{{ position }}</div>
+        <div> {{ id }} </div>
+        <div> {{ text }} </div>
+        <div> {{ date }} </div>
+        <div> {{ position }} </div>
     </div>
-    
 </template>
 
 <script>
@@ -18,8 +17,8 @@ export default {
         date: String,
         position: String,
     },
-    data(){
-        return{
+    data() {
+        return {
             styles: {
                 notification_hidden: false,
                 notification: true,
@@ -36,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.notification{
+.notification {
     border: 1px solid red;
     border-radius: 10px;
     width: 30%;
@@ -47,13 +46,13 @@ export default {
     background-color: bisque;
     margin-top: 5px;
 }
-.notification:hover{
+.notification:hover {
     opacity: .8;
 }
 .notification_hidden {
     display: none;
 }
-.top_left{
+.top_left {
     position: fixed;
     top: 60px;
     left: 10%;

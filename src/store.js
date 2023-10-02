@@ -4,16 +4,16 @@ let lastId = 0
 
 const store = createStore({
     state() {
-        return{
+        return {
             notifications: [], 
         }
     },
 
     mutations: {
-        addNotification(state, notification){
+        addNotification(state, notification) {
             state.notifications.unshift(notification)
         },
-        notifications(state, notifications){
+        notifications(state, notifications) {
             state.notifications = notifications
         },
     },
@@ -25,14 +25,14 @@ const store = createStore({
     },
 
     actions: {
-        addNotification({ commit }, data){
+        addNotification( { commit }, data) {
             const id = (lastId += 1);
             commit('addNotification', {
                 id,
                 ...data
             });
         },
-        removeNotification({state, commit}, id) {
+        removeNotification( { state, commit }, id) {
             let filteredNotifications = state.notifications.filter((notification) => {
                 return notification.id !== id;
             })
