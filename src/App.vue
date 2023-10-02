@@ -20,9 +20,10 @@
 </template>
 
 <script>
-  import {mapGetters, mapMutations, mapActions } from 'vuex'
+  import { mapActions } from 'vuex'
   import NotificationList from './components/NotificationsList.vue'
   import Notification from './components/Notification.vue';
+  
   export default {
     components: {
       Notification,
@@ -34,7 +35,7 @@
       }
     },
     methods: {
-        ...mapMutations(['addNotification']),
+        ...mapActions(['addNotification',]),
         notify1(){
           this.addNotification({
             text: 'this is left top notification',

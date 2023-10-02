@@ -1,5 +1,5 @@
 <template>
-    <div :class="[position, styles]" @click="show"> 
+    <div :class="[position, styles]" @click="removeNotification(id)"> 
         <div>{{ id }}</div>
         <div>{{ text }}</div>
         <div>{{ date }}</div>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
     props: {
         id: Number,
@@ -18,8 +20,6 @@ export default {
     },
     data(){
         return{
-            newText: 'this is notification!',
-            newDate: new Date(),
             styles: {
                 notification_hidden: false,
                 notification: true,
@@ -30,9 +30,7 @@ export default {
         }
     },
     methods: {
-        show(){
-            this.styles.notification_hidden = !this.styles.notification_hidden;
-        },
+        ...mapActions(['removeNotification']),
     }
 }
 </script>

@@ -12,8 +12,9 @@
 </template>
 
 <script>
-import {mapGetters, mapMutations, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import Notification from './Notification.vue'
+
 export default {
     components:{
         Notification,
